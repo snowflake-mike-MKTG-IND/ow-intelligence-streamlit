@@ -155,7 +155,8 @@ st.markdown("""
 <style>
 :root{--bg:#f6f8fb;--surface:#fff;--ink:#0f1c2e;--ink-soft:#51607a;--ink-faint:#8190a8;
 --line:#e4e9f1;--line-soft:#eef2f7;--blue:#29b5e8;--navy:#11567f;--amber:#f59e0b;--red:#e5484d;--green:#2e9e6b;}
-.block-container{padding-top:1.2rem;max-width:1280px;}
+.block-container{padding-top:3rem;max-width:1280px;}
+header[data-testid="stHeader"]{background:transparent;}
 #MainMenu,footer{visibility:hidden;}
 .topbar{display:flex;align-items:center;justify-content:space-between;background:var(--surface);
 border:1px solid var(--line);border-radius:14px;padding:14px 22px;margin-bottom:18px;
@@ -231,6 +232,13 @@ padding:14px 16px;margin-top:20px;font-size:.86rem;color:#5c4a20;line-height:1.5
 .driver-bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;}
 .driver-fill{height:100%;border-radius:4px;}
 .driver-push{font-size:.76rem;font-weight:700;white-space:nowrap;}
+.context{background:linear-gradient(180deg,#f0f8fc,#ffffff);border:1px solid var(--line);border-radius:14px;
+padding:16px 20px;margin-bottom:18px;box-shadow:0 1px 2px rgba(16,35,60,.04);}
+.context-title{font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:6px;}
+.context p{font-size:.83rem;color:var(--ink-soft);line-height:1.55;margin:4px 0 0;}
+.context b{color:var(--ink);font-weight:650;}
+.context .src{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+.context .pill{font-size:.7rem;font-weight:600;color:#1b7aa3;background:#eaf6fb;border:1px solid #d3ecf5;border-radius:999px;padding:3px 10px;}
 .badge{font-weight:800;margin-left:6px;}
 .badge-bullseye{color:var(--green);}.badge-hit{color:var(--blue);}.badge-correct-tier{color:var(--amber);}.badge-miss{color:var(--red);}
 </style>
@@ -246,6 +254,21 @@ st.markdown("""
       <div class="brand-sub">Live pre-release predictions (2026) · V31 pedigree-gated distributional model on Snowflake</div>
     </div>
   </div>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="context">
+  <div class="context-title">🧩 How these predictions are made</div>
+  <p>Every opening-weekend call is built entirely from <b>open, public data</b> — no proprietary studio numbers. Signals are refreshed in the weeks before release and scored against public box-office results.</p>
+  <div class="src">
+    <span class="pill">Google Trends search interest</span>
+    <span class="pill">Wikipedia pageviews</span>
+    <span class="pill">YouTube trailer sentiment &amp; intent</span>
+    <span class="pill">TMDB metadata</span>
+    <span class="pill">Public box-office actuals</span>
+  </div>
+  <p>The entire pipeline — data refresh, feature engineering, validation gates, model scoring (V31 pedigree-gated distributional model), and this app — is built and operated <b>agentically by Cortex Code</b> on Snowflake.</p>
 </div>
 """, unsafe_allow_html=True)
 
