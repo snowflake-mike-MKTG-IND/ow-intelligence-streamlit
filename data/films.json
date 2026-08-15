@@ -10052,7 +10052,7 @@
    "P_LARGE_PCT": 94.3,
    "BREAKOUT_PCT": 94.3,
    "BREAKOUT_FLAG": true,
-   "SUMMARY_TEXT": "V31 (pedigree-gated distributional) @ D-3 \u2014 final pre-release score. Best-estimate LARGE+ $177.1M; risk-adjusted $137.4M; 50% HDR $101.1M\u2013$240.6M. RF P(\u2265$50M) 94%. Reflects two data fixes at D-3: Wikipedia captured to release week (peak ~105K/day) and the confirmed top-5 billed cast (Zendaya restored, lifting star power). Up from the $150.2M D-7 read as demand tightens into release. Outcome: opened to $360.1M \u2014 a record domestic opening that landed far above the modeled range, a demand-quiet-giant miss consistent with V31's known large-film ceiling. Tier called correctly (LARGE+)."
+   "SUMMARY_TEXT": "V31 (pedigree-gated distributional) @ D-3 \u2014 final pre-release score. Best-estimate LARGE+ $177.1M; risk-adjusted $137.4M; 50% HDR $101.1M\u2013$240.6M. RF P(\u2265$50M) 94%. Reflects two data fixes at D-3: encyclopedia pageviews captured to release week (peak ~105K/day) and the confirmed top-5 billed cast (Zendaya restored, lifting star power). Up from the $150.2M D-7 read as demand tightens into release. Outcome: opened to $360.1M \u2014 a record domestic opening that landed far above the modeled range, a demand-quiet-giant miss consistent with V31's known large-film ceiling. Tier called correctly (LARGE+)."
   },
   {
    "MOVIE_ID": 1268,
@@ -10074,7 +10074,7 @@
    "P_LARGE_PCT": 0.0,
    "BREAKOUT_PCT": 0.0,
    "BREAKOUT_FLAG": false,
-   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D-3. Best-estimate SMALL $7.2M; risk-adjusted $6.8M; 50% HDR $5.1M-$11.9M. RF P(>=$50M) 0%. Final pre-release read at D-3. Demand stays low-decile (Google Trends ~9th pctile) and the real Broken Lizard cast carries no lifetime box office, keeping it firmly SMALL. Outcome: opened to $4.0M (SMALL), below the $7.2M point; tier called correctly."
+   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D-3. Best-estimate SMALL $7.2M; risk-adjusted $6.8M; 50% HDR $5.1M-$11.9M. RF P(>=$50M) 0%. Final pre-release read at D-3. Demand stays low-decile (Search Trends ~9th pctile) and the real Broken Lizard cast carries no lifetime box office, keeping it firmly SMALL. Outcome: opened to $4.0M (SMALL), below the $7.2M point; tier called correctly."
   },
   {
    "MOVIE_ID": 1250,
@@ -10118,7 +10118,7 @@
    "P_LARGE_PCT": 4.8,
    "BREAKOUT_PCT": 4.8,
    "BREAKOUT_FLAG": false,
-   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D-3. Best-estimate MID $24.2M; risk-adjusted $23.6M; 50% HDR $15.8M-$40.6M. RF P(>=$50M) 5%. Final pre-release read (was $17.0M at D-7). Refreshed demand lifted the point: Google Trends velocity/acceleration in the 97th-98th pctile and a Wikipedia peak of ~51K confirm pedigree via the model's gated interactions. Still MID against an $85M production budget \u2014 meaningful downside; original PG-13 sci-fi thriller (Hathaway/McGregor)."
+   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D-3. Best-estimate MID $24.2M; risk-adjusted $23.6M; 50% HDR $15.8M-$40.6M. RF P(>=$50M) 5%. Final pre-release read (was $17.0M at D-7). Refreshed demand lifted the point: Search Trends velocity/acceleration in the 97th-98th pctile and an encyclopedia pageview peak of ~51K confirm pedigree via the model's gated interactions. Still MID against an $85M production budget \u2014 meaningful downside; original PG-13 sci-fi thriller (Hathaway/McGregor)."
   },
   {
    "MOVIE_ID": 1347,

@@ -262,10 +262,10 @@ st.markdown("""
   <div class="context-title">🧩 How these predictions are made</div>
   <p>Every opening-weekend call is built entirely from <b>open, public data</b> — no proprietary studio numbers. Signals are refreshed in the weeks before release and scored against public box-office results.</p>
   <div class="src">
-    <span class="pill">Google Trends search interest</span>
-    <span class="pill">Wikipedia pageviews</span>
-    <span class="pill">YouTube trailer sentiment &amp; intent</span>
-    <span class="pill">TMDB metadata</span>
+    <span class="pill">Search Trends interest</span>
+    <span class="pill">Encyclopedia pageviews</span>
+    <span class="pill">Trailer comment sentiment &amp; intent</span>
+    <span class="pill">Movie metadata</span>
     <span class="pill">Public box-office actuals</span>
   </div>
   <p>The entire pipeline — data refresh, feature engineering, validation gates, model scoring (V31 pedigree-gated distributional model), and this app — is built and operated <b>agentically by Cortex Code</b> on Snowflake.</p>
