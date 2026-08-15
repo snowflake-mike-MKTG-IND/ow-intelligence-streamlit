@@ -10,6 +10,10 @@ import streamlit as st
 st.set_page_config(page_title="Opening Weekend Intelligence", page_icon="🎬", layout="wide")
 
 DATA = json.loads((Path(__file__).parent / "data" / "films.json").read_text())
+try:
+    DRIVERS = json.loads((Path(__file__).parent / "data" / "drivers.json").read_text())
+except Exception:
+    DRIVERS = {}
 
 TIER_LABEL = {
     "SMALL": "Small  ·  under $15M",
@@ -26,6 +30,68 @@ VERDICT_META = {
     "MISS": ("Miss", "✗", "#e5484d", "miss"),
 }
 VERDICT_ORDER = ["HIT", "NEAR_HIT", "CLOSE", "MISS"]
+
+# --- "What's driving this call" (ported from the SPCS drivers route) ---
+# V31/V30 are demand-forward: only demand/intent/sentiment/context signals enter standalone.
+DRIVER_META = {
+    "YT_COMMENTS": ("Trailer buzz", "LARGE+"),
+    "ROLLING_7D": ("Search interest (7d)", "LARGE+"),
+    "NET_INTENT_PCT": ("Purchase intent", "LARGE+"),
+    "THEATRICAL_INTENT_PCT": ("Theater excitement", "LARGE+"),
+    "ROLLING_14D": ("Search interest (14d)", "LARGE+"),
+    "PASS_INTENT_PCT": ("Audience apathy", "SMALL"),
+    "SENTIMENT": ("Trailer sentiment", "LARGE+"),
+    "GENRE_ACTION_FRANCHISE": ("Action/franchise", "LARGE+"),
+    "GENRE_HORROR": ("Horror genre", "MID"),
+    "IS_PEAK_SEASON": ("Peak season release", "LARGE+"),
+}
+DRIVER_IMPORTANCE = {"YT_COMMENTS": 5.0, "ROLLING_7D": 4.6, "NET_INTENT_PCT": 4.2,
+    "THEATRICAL_INTENT_PCT": 3.6, "ROLLING_14D": 3.2, "PASS_INTENT_PCT": 2.9,
+    "SENTIMENT": 2.4, "GENRE_ACTION_FRANCHISE": 1.8, "GENRE_HORROR": 1.6, "IS_PEAK_SEASON": 1.4}
+DRIVER_BINARY = {"GENRE_HORROR", "GENRE_ACTION_FRANCHISE", "IS_PEAK_SEASON"}
+PUSH_COLOR = {"LARGE+": "#2e9e6b", "SMALL": "#e5484d", "MID": "#f59e0b"}
+
+def compute_drivers(mid):
+    row = DRIVERS.get(str(mid))
+    if not row:
+        return []
+    out = []
+    for feat, (label, pushes) in DRIVER_META.items():
+        pct = row.get(f"PRANK_{feat}")
+        pct = 0.5 if pct is None else pct
+        val = row.get(feat) or 0
+        if feat in DRIVER_BINARY and val == 0:
+            continue
+        dev = abs(pct - 0.5)
+        score = DRIVER_IMPORTANCE.get(feat, 1) * dev * 2
+        if score <= 0.3:
+            continue
+        pr = round(pct * 100)
+        if pr == 0:
+            direction = "lowest in the dataset"
+        elif pr == 100:
+            direction = "highest in the dataset"
+        elif pr >= 90:
+            direction = f"higher than {pr}% of films"
+        elif pr >= 75:
+            direction = f"above average (top {100 - pr}%)"
+        elif pr <= 10:
+            direction = f"lower than {100 - pr}% of films"
+        elif pr <= 25:
+            direction = f"below average (bottom {pr}%)"
+        else:
+            direction = f"near average ({pr}th percentile)"
+        is_high = pct > 0.5
+        push = pushes
+        if pushes == "SMALL" and not is_high:
+            push = "LARGE+"
+        elif pushes == "LARGE+" and not is_high:
+            push = "SMALL"
+        elif pushes == "MID":
+            push = "MID" if is_high else "SMALL"
+        out.append({"label": label, "pct": pct, "direction": direction, "push": push, "score": score})
+    out.sort(key=lambda x: -x["score"])
+    return out[:5]
 
 # ---------- helpers ----------
 def money(m):
@@ -157,6 +223,14 @@ padding:14px 18px;margin:16px 0;border-left:4px solid var(--green);}
 .prob-val{font-size:.76rem;font-weight:700;width:36px;text-align:right;color:var(--ink);}
 .summary{display:flex;gap:10px;background:#fff9ec;border:1px solid #ffe8bf;border-radius:12px;
 padding:14px 16px;margin-top:20px;font-size:.86rem;color:#5c4a20;line-height:1.5;}
+.drivers-section{margin-top:22px;border-top:1px solid var(--line-soft);padding-top:18px;}
+.drivers-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);margin-bottom:14px;}
+.driver-row{display:grid;grid-template-columns:1.5fr 1.1fr auto;align-items:center;gap:16px;margin-bottom:13px;}
+.driver-label{font-weight:600;font-size:.9rem;color:var(--ink);display:block;line-height:1.2;}
+.driver-detail{font-size:.74rem;color:var(--ink-faint);}
+.driver-bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;}
+.driver-fill{height:100%;border-radius:4px;}
+.driver-push{font-size:.76rem;font-weight:700;white-space:nowrap;}
 .badge{font-weight:800;margin-left:6px;}
 .badge-bullseye{color:var(--green);}.badge-hit{color:var(--blue);}.badge-correct-tier{color:var(--amber);}.badge-miss{color:var(--red);}
 </style>
@@ -275,6 +349,19 @@ with right:
 
         summary = f'<div class="summary"><span>⚠️</span><p>{d["SUMMARY_TEXT"]}</p></div>' if d.get("SUMMARY_TEXT") else ""
 
+        drivers = compute_drivers(st.session_state.selected_id)
+        drivers_html = ""
+        if drivers:
+            rows = "".join(
+                f'<div class="driver-row">'
+                f'<div class="driver-info"><span class="driver-label">{dr["label"]}</span>'
+                f'<span class="driver-detail">{dr["direction"]}</span></div>'
+                f'<div class="driver-bar"><div class="driver-fill" style="width:{min(100, dr["pct"]*100):.0f}%;background:{PUSH_COLOR[dr["push"]]}"></div></div>'
+                f'<span class="driver-push" style="color:{PUSH_COLOR[dr["push"]]}">→ {dr["push"]}</span>'
+                f'</div>'
+                for dr in drivers)
+            drivers_html = f'<div class="drivers-section"><div class="drivers-title">What\'s driving this call</div><div class="drivers-list">{rows}</div></div>'
+
         st.markdown(f"""
 <div class="pred-card">
   <div class="pred-head">
@@ -315,6 +402,7 @@ with right:
       <div class="prob-split"><div class="prob-title">How confident, by tier</div>{prob_rows}</div>
     </div>
   </div>
+  {drivers_html}
   {summary}
 </div>
 """, unsafe_allow_html=True)
