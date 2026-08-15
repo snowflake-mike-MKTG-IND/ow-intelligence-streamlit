@@ -169,7 +169,7 @@ st.markdown("""
     <span class="brand-icon">🎬</span>
     <div>
       <div class="brand-title">Opening Weekend Intelligence</div>
-      <div class="brand-sub">V31 · pedigree-gated distributional model on Snowflake</div>
+      <div class="brand-sub">Live pre-release predictions (2026) · V31 pedigree-gated distributional model on Snowflake</div>
     </div>
   </div>
 </div>
@@ -184,7 +184,7 @@ if "selected_id" not in st.session_state:
 left, right = st.columns([1, 2.5], gap="large")
 
 with left:
-    seg_label = st.selectbox("Predictions", ["Upcoming predictions", "Past predictions"],
+    seg_label = st.selectbox("Predictions", ["Upcoming predictions", "Released predictions"],
                              label_visibility="collapsed")
     segment = "upcoming" if seg_label.startswith("Upcoming") else "past"
     if segment != st.session_state.segment:
@@ -192,6 +192,8 @@ with left:
         st.session_state.selected_id = None
 
     films = list(DATA[segment])
+    # Live predictions only — drop the OOF holdout backtest (2022-2026 historical).
+    films = [f for f in films if f.get("PREDICTION_TYPE") != "OOF_BACKTEST"]
     # attach accuracy buckets for past
     if segment == "past":
         for f in films:
@@ -319,4 +321,4 @@ with right:
 
 st.markdown("<div style='color:#8190a8;font-size:.78rem;margin-top:18px'>Powered by Snowflake · "
             "Predictions are calibrated tier calls with breakout odds, not precise dollar guarantees · "
-            "Static snapshot of the OW_INTELLIGENCE model output.</div>", unsafe_allow_html=True)
+            "Live pre-release predictions only (no holdout backtests) · static snapshot of the OW_INTELLIGENCE model output.</div>", unsafe_allow_html=True)
