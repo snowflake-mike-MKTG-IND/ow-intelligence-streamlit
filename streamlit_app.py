@@ -17,6 +17,16 @@ TIER_LABEL = {
     "LARGE+": "Large+  ·  $50M and up",
 }
 
+# Closeness verdict (V31): how close the prediction was, by % error — tier-agnostic.
+# label, symbol, color, outcome-tone
+VERDICT_META = {
+    "HIT": ("Hit", "✓", "#2e9e6b", "hit"),
+    "NEAR_HIT": ("Near hit", "≈", "#29b5e8", "near"),
+    "CLOSE": ("Close estimate", "·", "#f59e0b", "close"),
+    "MISS": ("Miss", "✗", "#e5484d", "miss"),
+}
+VERDICT_ORDER = ["HIT", "NEAR_HIT", "CLOSE", "MISS"]
+
 # ---------- helpers ----------
 def money(m):
     if m is None:
@@ -35,22 +45,27 @@ def breakout_label(pct):
         return ("Real breakout chance — roughly 1 in 3", "flag")
     return ("Likely to break out — better than even", "hot")
 
-def accuracy_bucket(d):
-    """Derive an accuracy bucket for a released/backtested film with an actual."""
-    if d.get("ACTUAL_OW_M") is None or d.get("TIER_HIT") is None:
-        return None
-    if not d["TIER_HIT"]:
-        return "MISS"
-    actual = d["ACTUAL_OW_M"] or 0
+def pct_off(d):
+    """Percent error of the prediction vs actual, or None."""
+    actual = d.get("ACTUAL_OW_M")
     err = d.get("ABS_ERROR_M")
-    if actual <= 0 or err is None:
-        return "CORRECT_TIER"
-    ratio = err / actual
-    if ratio <= 0.10:
-        return "BULLSEYE"
-    if ratio <= 0.25:
+    if actual is None or err is None or actual <= 0:
+        return None
+    return err / actual
+
+def accuracy_bucket(d):
+    """How close was the prediction? Tier-agnostic, purely % error.
+    <=10% Hit · 11-20% Near hit · 20-25% Close estimate · >25% Miss."""
+    r = pct_off(d)
+    if r is None:
+        return None
+    if r <= 0.10:
         return "HIT"
-    return "CORRECT_TIER"
+    if r <= 0.20:
+        return "NEAR_HIT"
+    if r <= 0.25:
+        return "CLOSE"
+    return "MISS"
 
 def detail_for(mid):
     matches = [d for d in DATA["details"] if d["MOVIE_ID"] == mid]
@@ -68,8 +83,6 @@ def density_path(peak_pct, p_small, p_large):
     return (f"M {sx} 40 Q {peak-ls*0.8} {40-h*0.4}, {peak-ls*0.3} {40-h*0.8} "
             f"Q {peak} {40-h}, {peak} {40-h} Q {peak} {40-h}, {peak+rs*0.3} {40-h*0.8} "
             f"Q {peak+rs*0.8} {40-h*0.4}, {ex} 40 Z")
-
-BADGE = {"BULLSEYE": "●", "HIT": "✓", "CORRECT_TIER": "~", "MISS": "✗"}
 
 # ---------- styles ----------
 st.markdown("""
@@ -109,6 +122,9 @@ background:#fff4e1;border:1px solid #ffe3b0;padding:5px 10px;border-radius:8px;w
 .tier-large{background:#e9f7f0;color:#1f7a52;}
 .outcome{display:flex;gap:26px;flex-wrap:wrap;background:var(--line-soft);border-radius:12px;
 padding:14px 18px;margin:16px 0;border-left:4px solid var(--green);}
+.outcome.hit{border-left-color:var(--green);}
+.outcome.near{border-left-color:var(--blue);}
+.outcome.close{border-left-color:var(--amber);}
 .outcome.miss{border-left-color:var(--red);}
 .outcome-item{display:flex;flex-direction:column;gap:3px;}
 .outcome-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint);}
@@ -156,11 +172,6 @@ st.markdown("""
       <div class="brand-sub">V31 · pedigree-gated distributional model on Snowflake</div>
     </div>
   </div>
-  <div class="viewtoggle">
-    <span class="tb active">💼 Business</span>
-    <span class="tb disabled">📊 Data Science</span>
-    <span class="tb disabled">✅ Validation</span>
-  </div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -185,15 +196,11 @@ with left:
     if segment == "past":
         for f in films:
             f["_bucket"] = accuracy_bucket(detail_for(f["MOVIE_ID"]) or {})
-        counts = {b: sum(1 for f in films if f.get("_bucket") == b)
-                  for b in ("BULLSEYE", "HIT", "CORRECT_TIER", "MISS")}
+        counts = {b: sum(1 for f in films if f.get("_bucket") == b) for b in VERDICT_ORDER}
         acc = st.radio(
             "Accuracy",
-            ["ALL", "BULLSEYE", "HIT", "CORRECT_TIER", "MISS"],
-            format_func=lambda b: {"ALL": "All", "BULLSEYE": f"Bullseye ({counts['BULLSEYE']})",
-                                   "HIT": f"Hit ({counts['HIT']})",
-                                   "CORRECT_TIER": f"Correct tier ({counts['CORRECT_TIER']})",
-                                   "MISS": f"Miss ({counts['MISS']})"}[b],
+            ["ALL"] + VERDICT_ORDER,
+            format_func=lambda b: "All" if b == "ALL" else f"{VERDICT_META[b][0]} ({counts[b]})",
             horizontal=True, label_visibility="collapsed")
         if acc != "ALL":
             films = [f for f in films if f.get("_bucket") == acc]
@@ -209,7 +216,7 @@ with left:
     st.caption(f"{len(films)} film{'s' if len(films) != 1 else ''}")
     for f in films:
         flag = "▲ " if (f.get("PRED_TIER", "").upper() != "LARGE+" and f.get("P_LARGE_PCT", 0) >= 30) else ""
-        badge = f"  {BADGE[f['_bucket']]}" if segment == "past" and f.get("_bucket") else ""
+        badge = f"  {VERDICT_META[f['_bucket']][1]}" if segment == "past" and f.get("_bucket") else ""
         label = f"{flag}{f['MOVIE_TITLE']}{badge}"
         if st.button(label, key=f"film_{f['MOVIE_ID']}", use_container_width=True):
             st.session_state.selected_id = f["MOVIE_ID"]
@@ -246,12 +253,15 @@ with right:
 
         outcome = ""
         if is_released and d.get("ACTUAL_OW_M") is not None:
-            hit = d.get("TIER_HIT")
-            outcome = f"""<div class="outcome {'hit' if hit else 'miss'}">
+            b = accuracy_bucket(d)
+            vlabel, vsym, vcolor, vtone = VERDICT_META.get(b, ("—", "", "#8190a8", ""))
+            r = pct_off(d)
+            off_txt = f"{r*100:.0f}% off" if r is not None else "—"
+            outcome = f"""<div class="outcome {vtone}">
               <div class="outcome-item"><span class="outcome-label">Actual opening</span><span class="outcome-val">{money(d['ACTUAL_OW_M'])}</span></div>
-              <div class="outcome-item"><span class="outcome-label">Actual tier</span><span class="mini-tier {tier_class(d.get('ACTUAL_TIER') or '')}">{d.get('ACTUAL_TIER') or '—'}</span></div>
-              <div class="outcome-item"><span class="outcome-label">Tier call</span><span class="outcome-val">{'Correct ✓' if hit else 'Missed'}</span></div>
               <div class="outcome-item"><span class="outcome-label">Dollar miss</span><span class="outcome-val">{money(d.get('ABS_ERROR_M'))}</span></div>
+              <div class="outcome-item"><span class="outcome-label">Off by</span><span class="outcome-val">{off_txt}</span></div>
+              <div class="outcome-item"><span class="outcome-label">Accuracy</span><span class="outcome-val" style="color:{vcolor}">{vsym} {vlabel}</span></div>
             </div>"""
 
         probs = [("Small", d["P_SMALL_PCT"], "tier-small"), ("Mid", d["P_MID_PCT"], "tier-mid"), ("Large+", d["P_LARGE_PCT"], "tier-large")]
