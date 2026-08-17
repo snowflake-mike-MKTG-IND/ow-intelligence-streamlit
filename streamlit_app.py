@@ -291,6 +291,9 @@ with left:
     films = list(DATA[segment])
     # Live predictions only — drop the OOF holdout backtest (2022-2026 historical).
     films = [f for f in films if f.get("PREDICTION_TYPE") != "OOF_BACKTEST"]
+    # upcoming: order by release date (soonest first)
+    if segment == "upcoming":
+        films.sort(key=lambda f: f.get("RELEASE_DATE") or "9999-99-99")
     # attach accuracy buckets for past
     if segment == "past":
         for f in films:
