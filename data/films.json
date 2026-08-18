@@ -46,7 +46,7 @@
    "RELEASE_DATE": "2026-08-28",
    "PREDICTION_TYPE": "UPCOMING",
    "PRED_TIER": "SMALL",
-   "PRED_OW_M": 10.78,
+   "PRED_OW_M": 10.32,
    "P_LARGE_PCT": 0.0,
    "BREAKOUT_FLAG": false
   },
@@ -10121,28 +10121,6 @@
    "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D-3. Best-estimate MID $24.2M; risk-adjusted $23.6M; 50% HDR $15.8M-$40.6M. RF P(>=$50M) 5%. Final pre-release read (was $17.0M at D-7). Refreshed demand lifted the point: Search Trends velocity/acceleration in the 97th-98th pctile and an encyclopedia pageview peak of ~51K confirm pedigree via the model's gated interactions. Still MID against an $85M production budget \u2014 meaningful downside; original PG-13 sci-fi thriller (Hathaway/McGregor). Outcome: opened to $21.0M (MID), just below the $24.2M point (within 15%); tier called correctly."
   },
   {
-   "MOVIE_ID": 1277,
-   "MOVIE_TITLE": "The Dog Stars",
-   "RELEASE_DATE": "2026-08-28",
-   "PREDICTION_TYPE": "UPCOMING",
-   "MODEL_VERSION": "V31@D14",
-   "PRED_TIER": "SMALL",
-   "ACTUAL_TIER": null,
-   "TIER_HIT": null,
-   "PRED_OW_M": 10.78,
-   "ACTUAL_OW_M": null,
-   "BEAR_OW_M": 6.89,
-   "BASE_OW_M": 10.78,
-   "BULL_OW_M": 18.61,
-   "ABS_ERROR_M": null,
-   "P_SMALL_PCT": 76.2,
-   "P_MID_PCT": 23.8,
-   "P_LARGE_PCT": 0.0,
-   "BREAKOUT_PCT": 0.0,
-   "BREAKOUT_FLAG": false,
-   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D14. Best-estimate SMALL $10.8M; risk-adjusted $10.8M; 50% HDR $6.9M-$18.6M. RF P(>=$50M) 0%."
-  },
-  {
    "MOVIE_ID": 1226,
    "MOVIE_TITLE": "Finding Emily",
    "RELEASE_DATE": "2026-08-28",
@@ -10317,6 +10295,28 @@
    "BREAKOUT_PCT": 0.0,
    "BREAKOUT_FLAG": false,
    "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D3. Best-estimate SMALL $4.5M; risk-adjusted $4.7M; 50% HDR $2.7M-$9.1M. RF P(>=$50M) 0%."
+  },
+  {
+   "MOVIE_ID": 1277,
+   "MOVIE_TITLE": "The Dog Stars",
+   "RELEASE_DATE": "2026-08-28",
+   "PREDICTION_TYPE": "UPCOMING",
+   "MODEL_VERSION": "V31@D14",
+   "PRED_TIER": "SMALL",
+   "ACTUAL_TIER": null,
+   "TIER_HIT": null,
+   "PRED_OW_M": 10.32,
+   "ACTUAL_OW_M": null,
+   "BEAR_OW_M": 6.5,
+   "BASE_OW_M": 10.32,
+   "BULL_OW_M": 17.97,
+   "ABS_ERROR_M": null,
+   "P_SMALL_PCT": 75.4,
+   "P_MID_PCT": 24.6,
+   "P_LARGE_PCT": 0.0,
+   "BREAKOUT_PCT": 0.0,
+   "BREAKOUT_FLAG": false,
+   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D14. Best-estimate SMALL $10.3M; risk-adjusted $10.3M; 50% HDR $6.5M-$18.0M. RF P(>=$50M) 0%. IP corrected to tier-2 book adaptation (Peter Heller novel)."
   }
  ]
 }
