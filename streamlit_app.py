@@ -269,6 +269,7 @@ st.markdown("""
     <span class="pill">Public box-office actuals</span>
   </div>
   <p>The entire pipeline — data refresh, feature engineering, validation gates, model scoring (V31 pedigree-gated distributional model), and this app — is built and operated <b>agentically by Cortex Code</b> on Snowflake.</p>
+  <p>🗓️ <b>When we predict:</b> predictions are made 3 weeks before opening, posted Friday and updated weekly, with week-of-opening predictions made the Tuesday before release. Each film is stamped with its prediction date below.</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -349,6 +350,19 @@ with right:
             rel_fmt = rel or "Release TBD"
         ptype = {"OOF_BACKTEST": "Backtested (held-out)", "UPCOMING": "Upcoming"}.get(d["PREDICTION_TYPE"], "Released")
 
+        # Prediction date = the horizon date the score represents (release − horizon from MODEL_VERSION),
+        # NOT when it was re-run. e.g. a D-14 score for a film opening 08-28 is stamped 08-14.
+        import re as _re
+        pred_on = ""
+        _hz = _re.search(r"@D(\d+)", d.get("MODEL_VERSION") or "")
+        if _hz and rel:
+            try:
+                from datetime import date as _date, timedelta as _td
+                _pd = _date.fromisoformat(rel) - _td(days=int(_hz.group(1)))
+                pred_on = " · Predicted " + _pd.strftime("%B %-d, %Y")
+            except Exception:
+                pred_on = ""
+
         breakout_chip = ""
         if d["PRED_TIER"].upper() != "LARGE+" and d["P_LARGE_PCT"] >= 30:
             breakout_chip = '<div class="breakout-flag">▲ Breakout watch</div>'
@@ -393,7 +407,7 @@ with right:
   <div class="pred-head">
     <div>
       <div class="film-title">{d['MOVIE_TITLE']}</div>
-      <div class="film-sub">{rel_fmt} · {ptype} · {d['MODEL_VERSION']}</div>
+      <div class="film-sub">{rel_fmt} · {ptype} · {d['MODEL_VERSION']}{pred_on}</div>
     </div>
     {breakout_chip}
   </div>
