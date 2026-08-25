@@ -11,6 +11,16 @@
    "BREAKOUT_FLAG": false
   },
   {
+   "MOVIE_ID": 1277,
+   "MOVIE_TITLE": "The Dog Stars",
+   "RELEASE_DATE": "2026-08-28",
+   "PREDICTION_TYPE": "UPCOMING",
+   "PRED_TIER": "SMALL",
+   "PRED_OW_M": 13.81,
+   "P_LARGE_PCT": 0.0,
+   "BREAKOUT_FLAG": false
+  },
+  {
    "MOVIE_ID": 1356,
    "MOVIE_TITLE": "By Any Means",
    "RELEASE_DATE": "2026-09-04",
@@ -41,16 +51,6 @@
    "BREAKOUT_FLAG": false
   },
   {
-   "MOVIE_ID": 1277,
-   "MOVIE_TITLE": "The Dog Stars",
-   "RELEASE_DATE": "2026-08-28",
-   "PREDICTION_TYPE": "UPCOMING",
-   "PRED_TIER": "SMALL",
-   "PRED_OW_M": 10.32,
-   "P_LARGE_PCT": 0.0,
-   "BREAKOUT_FLAG": false
-  },
-  {
    "MOVIE_ID": 1355,
    "MOVIE_TITLE": "Onslaught",
    "RELEASE_DATE": "2026-09-04",
@@ -76,7 +76,7 @@
    "RELEASE_DATE": "2026-08-28",
    "PREDICTION_TYPE": "UPCOMING",
    "PRED_TIER": "SMALL",
-   "PRED_OW_M": 4.75,
+   "PRED_OW_M": 5.16,
    "P_LARGE_PCT": 0.0,
    "BREAKOUT_FLAG": false
   },
@@ -10121,28 +10121,6 @@
    "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D-3. Best-estimate MID $24.2M; risk-adjusted $23.6M; 50% HDR $15.8M-$40.6M. RF P(>=$50M) 5%. Final pre-release read (was $17.0M at D-7). Refreshed demand lifted the point: Search Trends velocity/acceleration in the 97th-98th pctile and an encyclopedia pageview peak of ~51K confirm pedigree via the model's gated interactions. Still MID against an $85M production budget \u2014 meaningful downside; original PG-13 sci-fi thriller (Hathaway/McGregor). Outcome: opened to $21.0M (MID), just below the $24.2M point (within 15%); tier called correctly."
   },
   {
-   "MOVIE_ID": 1226,
-   "MOVIE_TITLE": "Finding Emily",
-   "RELEASE_DATE": "2026-08-28",
-   "PREDICTION_TYPE": "UPCOMING",
-   "MODEL_VERSION": "V31@D14",
-   "PRED_TIER": "SMALL",
-   "ACTUAL_TIER": null,
-   "TIER_HIT": null,
-   "PRED_OW_M": 4.75,
-   "ACTUAL_OW_M": null,
-   "BEAR_OW_M": 3.14,
-   "BASE_OW_M": 4.75,
-   "BULL_OW_M": 7.94,
-   "ABS_ERROR_M": null,
-   "P_SMALL_PCT": 82.5,
-   "P_MID_PCT": 17.5,
-   "P_LARGE_PCT": 0.0,
-   "BREAKOUT_PCT": 0.0,
-   "BREAKOUT_FLAG": false,
-   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D14. Best-estimate SMALL $4.8M; risk-adjusted $4.6M; 50% HDR $3.1M-$7.9M. RF P(>=$50M) 0%."
-  },
-  {
    "MOVIE_ID": 1225,
    "MOVIE_TITLE": "Fall 2: Deadpoint",
    "RELEASE_DATE": "2026-09-02",
@@ -10297,26 +10275,48 @@
    "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D3. Best-estimate SMALL $4.5M; risk-adjusted $4.7M; 50% HDR $2.7M-$9.1M. RF P(>=$50M) 0%."
   },
   {
+   "MOVIE_ID": 1226,
+   "MOVIE_TITLE": "Finding Emily",
+   "RELEASE_DATE": "2026-08-28",
+   "PREDICTION_TYPE": "UPCOMING",
+   "MODEL_VERSION": "V31@D3",
+   "PRED_TIER": "SMALL",
+   "ACTUAL_TIER": null,
+   "TIER_HIT": null,
+   "PRED_OW_M": 5.16,
+   "ACTUAL_OW_M": null,
+   "BEAR_OW_M": 3.02,
+   "BASE_OW_M": 5.16,
+   "BULL_OW_M": 9.96,
+   "ABS_ERROR_M": null,
+   "P_SMALL_PCT": 79.6,
+   "P_MID_PCT": 20.4,
+   "P_LARGE_PCT": 0.0,
+   "BREAKOUT_PCT": 0.0,
+   "BREAKOUT_FLAG": false,
+   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D3. Best-estimate SMALL $5.2M; risk-adjusted $5.3M; 50% HDR $3.0M-$10.0M. RF P(>=$50M) 0%."
+  },
+  {
    "MOVIE_ID": 1277,
    "MOVIE_TITLE": "The Dog Stars",
    "RELEASE_DATE": "2026-08-28",
    "PREDICTION_TYPE": "UPCOMING",
-   "MODEL_VERSION": "V31@D14",
+   "MODEL_VERSION": "V31@D3",
    "PRED_TIER": "SMALL",
    "ACTUAL_TIER": null,
    "TIER_HIT": null,
-   "PRED_OW_M": 10.32,
+   "PRED_OW_M": 13.81,
    "ACTUAL_OW_M": null,
-   "BEAR_OW_M": 6.5,
-   "BASE_OW_M": 10.32,
-   "BULL_OW_M": 17.97,
+   "BEAR_OW_M": 8.55,
+   "BASE_OW_M": 13.81,
+   "BULL_OW_M": 24.6,
    "ABS_ERROR_M": null,
-   "P_SMALL_PCT": 75.4,
-   "P_MID_PCT": 24.6,
+   "P_SMALL_PCT": 67.5,
+   "P_MID_PCT": 32.5,
    "P_LARGE_PCT": 0.0,
    "BREAKOUT_PCT": 0.0,
    "BREAKOUT_FLAG": false,
-   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D14. Best-estimate SMALL $10.3M; risk-adjusted $10.3M; 50% HDR $6.5M-$18.0M. RF P(>=$50M) 0%. IP corrected to tier-2 book adaptation (Peter Heller novel)."
+   "SUMMARY_TEXT": "V31 V3 (pedigree-gated distributional) @ D3. Best-estimate SMALL $13.8M; risk-adjusted $14.2M; 50% HDR $8.6M-$24.6M. RF P(>=$50M) 0%."
   }
  ]
 }
