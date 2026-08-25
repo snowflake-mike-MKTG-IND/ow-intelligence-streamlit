@@ -318,7 +318,7 @@ with left:
 
     st.caption(f"{len(films)} film{'s' if len(films) != 1 else ''}")
     for f in films:
-        flag = "▲ " if (f.get("PRED_TIER", "").upper() != "LARGE+" and f.get("P_LARGE_PCT", 0) >= 30) else ""
+        flag = "▲ " if ((f.get("PRED_TIER") or "").upper() != "LARGE+" and (f.get("P_LARGE_PCT") or 0) >= 30) else ""
         badge = f"  {VERDICT_META[f['_bucket']][1]}" if segment == "past" and f.get("_bucket") else ""
         label = f"{flag}{f['MOVIE_TITLE']}{badge}"
         if st.button(label, key=f"film_{f['MOVIE_ID']}", use_container_width=True):
@@ -333,6 +333,27 @@ with right:
                     "Select a film to see its opening-weekend prediction.</div>", unsafe_allow_html=True)
     else:
         is_released = d["PREDICTION_TYPE"] != "UPCOMING"
+        if d.get("PRED_OW_M") is None:
+            # Released film that was never scored pre-release — show the actual only, no prediction UI.
+            _rel = d.get("RELEASE_DATE")
+            try:
+                from datetime import date as _d0
+                _relf = _d0.fromisoformat(_rel).strftime("%B %-d, %Y") if _rel else "Released"
+            except Exception:
+                _relf = _rel or "Released"
+            _atier = d.get("ACTUAL_TIER") or ""
+            st.markdown(f"""<div class="pred-card">
+  <div class="pred-head"><div>
+    <div class="film-title">{d['MOVIE_TITLE']}</div>
+    <div class="film-sub">{_relf} · Released</div>
+  </div></div>
+  <div class="outcome">
+    <div class="outcome-item"><span class="outcome-label">Actual opening</span><span class="outcome-val">{money(d.get('ACTUAL_OW_M'))}</span></div>
+    <div class="outcome-item"><span class="outcome-label">Tier</span><span class="outcome-val">{TIER_LABEL.get(_atier, _atier)}</span></div>
+  </div>
+  <div class="summary"><span>ℹ️</span><p>{d.get('SUMMARY_TEXT','')}</p></div>
+</div>""", unsafe_allow_html=True)
+            st.stop()
         bk_text, tone = breakout_label(d["BREAKOUT_PCT"])
         lo = d["BEAR_OW_M"]
         hi = max(d["BULL_OW_M"], lo + 1)
