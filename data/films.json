@@ -1,16 +1,6 @@
 {
   "upcoming": [
     {
-      "MOVIE_ID": 1267,
-      "MOVIE_TITLE": "Street Fighter",
-      "RELEASE_DATE": "2026-10-16",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "LARGE+",
-      "PRED_OW_M": 55.7,
-      "P_LARGE_PCT": 49.5,
-      "BREAKOUT_FLAG": false
-    },
-    {
       "MOVIE_ID": 1216,
       "MOVIE_TITLE": "Clayface",
       "RELEASE_DATE": "2026-10-23",
@@ -18,26 +8,6 @@
       "PRED_TIER": "MID",
       "PRED_OW_M": 46.18,
       "P_LARGE_PCT": 38.0,
-      "BREAKOUT_FLAG": false
-    },
-    {
-      "MOVIE_ID": 1298,
-      "MOVIE_TITLE": "Whalefall",
-      "RELEASE_DATE": "2026-10-16",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "SMALL",
-      "PRED_OW_M": 11.76,
-      "P_LARGE_PCT": 0.0,
-      "BREAKOUT_FLAG": false
-    },
-    {
-      "MOVIE_ID": 1262,
-      "MOVIE_TITLE": "Sense and Sensibility",
-      "RELEASE_DATE": "2026-10-16",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "SMALL",
-      "PRED_OW_M": 8.82,
-      "P_LARGE_PCT": 0.0,
       "BREAKOUT_FLAG": false
     },
     {
@@ -52,6 +22,36 @@
     }
   ],
   "past": [
+    {
+      "MOVIE_ID": 1262,
+      "MOVIE_TITLE": "Sense and Sensibility",
+      "RELEASE_DATE": "2026-10-16",
+      "PREDICTION_TYPE": "RELEASED",
+      "PRED_TIER": "SMALL",
+      "PRED_OW_M": 8.82,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
+    },
+    {
+      "MOVIE_ID": 1267,
+      "MOVIE_TITLE": "Street Fighter",
+      "RELEASE_DATE": "2026-10-16",
+      "PREDICTION_TYPE": "RELEASED",
+      "PRED_TIER": "LARGE+",
+      "PRED_OW_M": 55.7,
+      "P_LARGE_PCT": 49.5,
+      "BREAKOUT_FLAG": false
+    },
+    {
+      "MOVIE_ID": 1298,
+      "MOVIE_TITLE": "Whalefall",
+      "RELEASE_DATE": "2026-10-16",
+      "PREDICTION_TYPE": "RELEASED",
+      "PRED_TIER": "SMALL",
+      "PRED_OW_M": 11.76,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
+    },
     {
       "MOVIE_ID": 1251,
       "MOVIE_TITLE": "Other Mommy",
@@ -10555,69 +10555,69 @@
       "MOVIE_ID": 1262,
       "MOVIE_TITLE": "Sense and Sensibility",
       "RELEASE_DATE": "2026-10-16",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "MODEL_VERSION": "V31v5@D3",
       "PRED_TIER": "SMALL",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
+      "ACTUAL_TIER": "SMALL",
+      "TIER_HIT": true,
       "PRED_OW_M": 8.82,
-      "ACTUAL_OW_M": null,
+      "ACTUAL_OW_M": 7.2,
       "BEAR_OW_M": 5.89,
       "BASE_OW_M": 8.82,
       "BULL_OW_M": 14.58,
-      "ABS_ERROR_M": null,
+      "ABS_ERROR_M": 1.62,
       "P_SMALL_PCT": null,
       "P_MID_PCT": null,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V5. Best estimate $8.8M (SMALL); risk-adjusted $8.1M; range $5.9M to $14.6M. Chance of a $50M+ opening: 0%.",
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V5. Best estimate $8.8M (SMALL); risk-adjusted $8.1M; range $5.9M to $14.6M. Chance of a $50M+ opening: 0%. Outcome: opened to $7.2M (SMALL) on 2,545 screens vs $8.82M pred; tier called correctly.",
       "BAYES_OW_M": 8.12
     },
     {
       "MOVIE_ID": 1267,
       "MOVIE_TITLE": "Street Fighter",
       "RELEASE_DATE": "2026-10-16",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "MODEL_VERSION": "V31v5@D3",
       "PRED_TIER": "LARGE+",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
+      "ACTUAL_TIER": "MID",
+      "TIER_HIT": false,
       "PRED_OW_M": 55.7,
-      "ACTUAL_OW_M": null,
+      "ACTUAL_OW_M": 30.78,
       "BEAR_OW_M": 22.54,
       "BASE_OW_M": 55.7,
       "BULL_OW_M": 84.21,
-      "ABS_ERROR_M": null,
+      "ABS_ERROR_M": 24.92,
       "P_SMALL_PCT": null,
       "P_MID_PCT": null,
       "P_LARGE_PCT": 49.5,
       "BREAKOUT_PCT": 49.5,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V5. Best estimate $55.7M (LARGE+); risk-adjusted $40.2M; range $22.5M to $84.2M. Chance of a $50M+ opening: 50%.",
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V5. Best estimate $55.7M (LARGE+); risk-adjusted $40.2M; range $22.5M to $84.2M. Chance of a $50M+ opening: 50%. Outcome: opened to $30.78M (MID) on 3,575 screens vs $55.7M pred; tier called incorrectly.",
       "BAYES_OW_M": 40.22
     },
     {
       "MOVIE_ID": 1298,
       "MOVIE_TITLE": "Whalefall",
       "RELEASE_DATE": "2026-10-16",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "MODEL_VERSION": "V31v5@D3",
       "PRED_TIER": "SMALL",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
+      "ACTUAL_TIER": "SMALL",
+      "TIER_HIT": true,
       "PRED_OW_M": 11.76,
-      "ACTUAL_OW_M": null,
+      "ACTUAL_OW_M": 7.84,
       "BEAR_OW_M": 7.73,
       "BASE_OW_M": 11.76,
       "BULL_OW_M": 20.32,
-      "ABS_ERROR_M": null,
+      "ABS_ERROR_M": 3.92,
       "P_SMALL_PCT": null,
       "P_MID_PCT": null,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V5. Best estimate $11.8M (SMALL); risk-adjusted $11.4M; range $7.7M to $20.3M. Chance of a $50M+ opening: 0%.",
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V5. Best estimate $11.8M (SMALL); risk-adjusted $11.4M; range $7.7M to $20.3M. Chance of a $50M+ opening: 0%. Outcome: opened to $7.84M (SMALL) on 3,065 screens vs $11.76M pred; tier called correctly.",
       "BAYES_OW_M": 11.4
     },
     {
@@ -10645,10 +10645,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-10-20T04:42:46Z",
+    "published_at": "2026-10-20T05:21:30Z",
     "updated": "October 19, 2026",
-    "review_id": "R-1020-97dd18",
-    "snapshot": "acf76cbea6c3",
+    "review_id": "R-1020-52a3c8",
+    "snapshot": "dadb1d3eeb11",
     "model": "V31 V7"
   }
 }
