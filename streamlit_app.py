@@ -1,7 +1,8 @@
 """Opening Weekend Intelligence — Streamlit replica of the SPCS app's front page (Business view).
 
-Static snapshot: reads bundled data/films.json (no Snowflake connection required),
-so it runs on Streamlit Community Cloud (the free tier) with no secrets.
+Reads bundled data/films.json (no Snowflake connection required), so it runs on Streamlit Community Cloud
+(the free tier) with no secrets. The data files are the predictions of record, published here by Lomis
+(the production pipeline agent) after an independent review by Gruney; each publish is a commit.
 """
 import json
 from pathlib import Path
@@ -10,6 +11,8 @@ import streamlit as st
 st.set_page_config(page_title="Opening Weekend Intelligence", page_icon="🎬", layout="wide")
 
 DATA = json.loads((Path(__file__).parent / "data" / "films.json").read_text())
+META = DATA.get("meta") or {}
+UPDATED = f" · Predictions updated {META['updated']}" if META.get("updated") else ""
 try:
     DRIVERS = json.loads((Path(__file__).parent / "data" / "drivers.json").read_text())
 except Exception:
@@ -245,13 +248,13 @@ padding:16px 20px;margin-bottom:18px;box-shadow:0 1px 2px rgba(16,35,60,.04);}
 """, unsafe_allow_html=True)
 
 # ---------- top bar ----------
-st.markdown("""
+st.markdown(f"""
 <div class="topbar">
   <div class="brand">
     <span class="brand-icon">🎬</span>
     <div>
       <div class="brand-title">Opening Weekend Intelligence</div>
-      <div class="brand-sub">Live pre-release predictions (2026) · V31 pedigree-gated distributional model on Snowflake</div>
+      <div class="brand-sub">Live pre-release predictions (2026) · V31 pedigree-gated distributional model on Snowflake{UPDATED}</div>
     </div>
   </div>
 </div>
@@ -361,7 +364,7 @@ with right:
         def pos(v):
             return f"{min(100, max(0, (v - lo) / span * 100)):.1f}%"
         peak_pct = (d["PRED_OW_M"] - lo) / span * 100
-        dpath = density_path(peak_pct, d["P_SMALL_PCT"], d["P_LARGE_PCT"])
+        dpath = density_path(peak_pct, d["P_SMALL_PCT"] or 0, d["P_LARGE_PCT"])
 
         rel = d.get("RELEASE_DATE")
         try:
@@ -401,7 +404,11 @@ with right:
               <div class="outcome-item"><span class="outcome-label">Accuracy</span><span class="outcome-val" style="color:{vcolor}">{vsym} {vlabel}</span></div>
             </div>"""
 
-        probs = [("Small", d["P_SMALL_PCT"], "tier-small"), ("Mid", d["P_MID_PCT"], "tier-mid"), ("Large+", d["P_LARGE_PCT"], "tier-large")]
+        # A prediction with no frozen model inputs on record has only its Large+ chance; the Small/Mid split is not shown.
+        has_split = d.get("P_SMALL_PCT") is not None and d.get("P_MID_PCT") is not None
+        probs = [("Small", d.get("P_SMALL_PCT"), "tier-small"), ("Mid", d.get("P_MID_PCT"), "tier-mid"),
+                 ("Large+", d["P_LARGE_PCT"], "tier-large")] if has_split else [("Large+", d["P_LARGE_PCT"], "tier-large")]
+        prob_title = "How confident, by tier" if has_split else "Chance of Large+ ($50M+)"
         prob_rows = "".join(
             f'<div class="prob-row"><span class="prob-name">{name}</span>'
             f'<div class="prob-bar"><div class="prob-fill {cls}" style="width:{pct}%"></div></div>'
@@ -460,7 +467,7 @@ with right:
         <div class="breakout-pct">{d['BREAKOUT_PCT']}%</div>
         <div class="breakout-meta"><div class="breakout-title">Chance of a Large+ breakout</div><div class="breakout-text">{bk_text}</div></div>
       </div>
-      <div class="prob-split"><div class="prob-title">How confident, by tier</div>{prob_rows}</div>
+      <div class="prob-split"><div class="prob-title">{prob_title}</div>{prob_rows}</div>
     </div>
   </div>
   {drivers_html}
@@ -470,4 +477,5 @@ with right:
 
 st.markdown("<div style='color:#8190a8;font-size:.78rem;margin-top:18px'>Powered by Snowflake · "
             "Predictions are calibrated tier calls with breakout odds, not precise dollar guarantees · "
-            "Live pre-release predictions only (no holdout backtests) · static snapshot of the OW_INTELLIGENCE model output.</div>", unsafe_allow_html=True)
+            f"Live pre-release predictions only (no holdout backtests) · predictions of record from the OW_INTELLIGENCE model{UPDATED}.</div>",
+            unsafe_allow_html=True)
