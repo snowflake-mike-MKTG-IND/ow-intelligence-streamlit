@@ -6,8 +6,8 @@
       "RELEASE_DATE": "2026-10-23",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "MID",
-      "PRED_OW_M": 46.18,
-      "P_LARGE_PCT": 38.0,
+      "PRED_OW_M": 42.03,
+      "P_LARGE_PCT": 26.9,
       "BREAKOUT_FLAG": false
     },
     {
@@ -10533,23 +10533,23 @@
       "MOVIE_TITLE": "Clayface",
       "RELEASE_DATE": "2026-10-23",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D7",
+      "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "MID",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 46.18,
+      "PRED_OW_M": 42.03,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 31.81,
-      "BASE_OW_M": 46.18,
-      "BULL_OW_M": 72.4,
+      "BEAR_OW_M": 28.41,
+      "BASE_OW_M": 42.03,
+      "BULL_OW_M": 67.41,
       "ABS_ERROR_M": null,
       "P_SMALL_PCT": 0.0,
-      "P_MID_PCT": 62.0,
-      "P_LARGE_PCT": 38.0,
-      "BREAKOUT_PCT": 38.0,
+      "P_MID_PCT": 73.1,
+      "P_LARGE_PCT": 26.9,
+      "BREAKOUT_PCT": 26.9,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 7 days before opening with the production model V31 V7. Best estimate $46.2M (MID); risk-adjusted $42.5M; range $31.8M to $72.4M. Chance of a $50M+ opening: 38%.",
-      "BAYES_OW_M": 42.48
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $42.0M (MID); risk-adjusted $39.7M; range $28.4M to $67.4M. Chance of a $50M+ opening: 27%.",
+      "BAYES_OW_M": 39.68
     },
     {
       "MOVIE_ID": 1262,
@@ -10645,10 +10645,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-10-20T05:21:30Z",
-    "updated": "October 19, 2026",
-    "review_id": "R-1020-52a3c8",
-    "snapshot": "dadb1d3eeb11",
+    "published_at": "2026-10-20T17:07:32Z",
+    "updated": "October 20, 2026",
+    "review_id": "R-1020-83d706",
+    "snapshot": "400f85c51599",
     "model": "V31 V7"
   }
 }
