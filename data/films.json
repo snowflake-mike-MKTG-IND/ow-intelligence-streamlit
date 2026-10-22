@@ -19,6 +19,16 @@
       "PRED_OW_M": 8.01,
       "P_LARGE_PCT": 1.9,
       "BREAKOUT_FLAG": false
+    },
+    {
+      "MOVIE_ID": 1213,
+      "MOVIE_TITLE": "Ghost Soldier",
+      "RELEASE_DATE": "2026-11-11",
+      "PREDICTION_TYPE": "UPCOMING",
+      "PRED_TIER": "SMALL",
+      "PRED_OW_M": 7.84,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
     }
   ],
   "past": [
@@ -10642,13 +10652,36 @@
       "BREAKOUT_FLAG": false,
       "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $8.0M (SMALL); risk-adjusted $7.7M; range $4.9M to $15.5M. Chance of a $50M+ opening: 2%.",
       "BAYES_OW_M": 7.69
+    },
+    {
+      "MOVIE_ID": 1213,
+      "MOVIE_TITLE": "Ghost Soldier",
+      "RELEASE_DATE": "2026-11-11",
+      "PREDICTION_TYPE": "UPCOMING",
+      "MODEL_VERSION": "V31v7@D21",
+      "PRED_TIER": "SMALL",
+      "ACTUAL_TIER": null,
+      "TIER_HIT": null,
+      "PRED_OW_M": 7.84,
+      "ACTUAL_OW_M": null,
+      "BEAR_OW_M": 5.57,
+      "BASE_OW_M": 7.84,
+      "BULL_OW_M": 11.13,
+      "ABS_ERROR_M": null,
+      "P_SMALL_PCT": 93.3,
+      "P_MID_PCT": 6.7,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_PCT": 0.0,
+      "BREAKOUT_FLAG": false,
+      "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $7.8M (SMALL); risk-adjusted $6.7M; range $5.6M to $11.1M. Chance of a $50M+ opening: 0%.",
+      "BAYES_OW_M": 6.7
     }
   ],
   "meta": {
-    "published_at": "2026-10-20T17:07:32Z",
-    "updated": "October 20, 2026",
-    "review_id": "R-1020-83d706",
-    "snapshot": "400f85c51599",
+    "published_at": "2026-10-22T16:28:36Z",
+    "updated": "October 22, 2026",
+    "review_id": "R-1022-5e0e94",
+    "snapshot": "bcebd11c7cb9",
     "model": "V31 V7"
   }
 }
