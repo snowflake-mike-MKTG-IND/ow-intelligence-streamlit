@@ -6,18 +6,8 @@
       "RELEASE_DATE": "2026-10-23",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "MID",
-      "PRED_OW_M": 42.03,
-      "P_LARGE_PCT": 26.9,
-      "BREAKOUT_FLAG": false
-    },
-    {
-      "MOVIE_ID": 1300,
-      "MOVIE_TITLE": "Wild Horse Nine",
-      "RELEASE_DATE": "2026-11-06",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "SMALL",
-      "PRED_OW_M": 8.01,
-      "P_LARGE_PCT": 1.9,
+      "PRED_OW_M": 29.59,
+      "P_LARGE_PCT": 0.0,
       "BREAKOUT_FLAG": false
     },
     {
@@ -27,6 +17,16 @@
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "SMALL",
       "PRED_OW_M": 7.84,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
+    },
+    {
+      "MOVIE_ID": 1300,
+      "MOVIE_TITLE": "Wild Horse Nine",
+      "RELEASE_DATE": "2026-11-06",
+      "PREDICTION_TYPE": "UPCOMING",
+      "PRED_TIER": "SMALL",
+      "PRED_OW_M": 6.78,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_FLAG": false
     }
@@ -10547,19 +10547,19 @@
       "PRED_TIER": "MID",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 42.03,
+      "PRED_OW_M": 29.59,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 28.41,
-      "BASE_OW_M": 42.03,
-      "BULL_OW_M": 67.41,
+      "BEAR_OW_M": 19.6,
+      "BASE_OW_M": 29.59,
+      "BULL_OW_M": 49.2,
       "ABS_ERROR_M": null,
-      "P_SMALL_PCT": 0.0,
-      "P_MID_PCT": 73.1,
-      "P_LARGE_PCT": 26.9,
-      "BREAKOUT_PCT": 26.9,
+      "P_SMALL_PCT": null,
+      "P_MID_PCT": null,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $42.0M (MID); risk-adjusted $39.7M; range $28.4M to $67.4M. Chance of a $50M+ opening: 27%.",
-      "BAYES_OW_M": 39.68
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $29.6M (MID); risk-adjusted -; range $19.6M to $49.2M. Chance of a $50M+ opening: 0%.",
+      "BAYES_OW_M": null
     },
     {
       "MOVIE_ID": 1262,
@@ -10635,23 +10635,23 @@
       "MOVIE_TITLE": "Wild Horse Nine",
       "RELEASE_DATE": "2026-11-06",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D21",
+      "MODEL_VERSION": "V31v7@D14",
       "PRED_TIER": "SMALL",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 8.01,
+      "PRED_OW_M": 6.78,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 4.9,
-      "BASE_OW_M": 8.01,
-      "BULL_OW_M": 15.47,
+      "BEAR_OW_M": 4.04,
+      "BASE_OW_M": 6.78,
+      "BULL_OW_M": 13.29,
       "ABS_ERROR_M": null,
-      "P_SMALL_PCT": 48.3,
-      "P_MID_PCT": 49.8,
-      "P_LARGE_PCT": 1.9,
-      "BREAKOUT_PCT": 1.9,
+      "P_SMALL_PCT": 61.8,
+      "P_MID_PCT": 38.2,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $8.0M (SMALL); risk-adjusted $7.7M; range $4.9M to $15.5M. Chance of a $50M+ opening: 2%.",
-      "BAYES_OW_M": 7.69
+      "SUMMARY_TEXT": "Prediction of record, made 14 days before opening with the production model V31 V7. Best estimate $6.8M (SMALL); risk-adjusted $6.7M; range $4.0M to $13.3M. Chance of a $50M+ opening: 0%.",
+      "BAYES_OW_M": 6.67
     },
     {
       "MOVIE_ID": 1213,
@@ -10678,10 +10678,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-10-22T16:28:36Z",
-    "updated": "October 22, 2026",
-    "review_id": "R-1022-5e0e94",
-    "snapshot": "bcebd11c7cb9",
+    "published_at": "2026-10-23T20:26:21Z",
+    "updated": "October 23, 2026",
+    "review_id": "R-1023-0cfe89",
+    "snapshot": "c49813be2726",
     "model": "V31 V7"
   }
 }
