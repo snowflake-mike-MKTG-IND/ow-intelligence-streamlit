@@ -1,16 +1,6 @@
 {
   "upcoming": [
     {
-      "MOVIE_ID": 1216,
-      "MOVIE_TITLE": "Clayface",
-      "RELEASE_DATE": "2026-10-23",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "MID",
-      "PRED_OW_M": 29.59,
-      "P_LARGE_PCT": 0.0,
-      "BREAKOUT_FLAG": false
-    },
-    {
       "MOVIE_ID": 1213,
       "MOVIE_TITLE": "Ghost Soldier",
       "RELEASE_DATE": "2026-11-11",
@@ -42,6 +32,16 @@
     }
   ],
   "past": [
+    {
+      "MOVIE_ID": 1216,
+      "MOVIE_TITLE": "Clayface",
+      "RELEASE_DATE": "2026-10-23",
+      "PREDICTION_TYPE": "RELEASED",
+      "PRED_TIER": "MID",
+      "PRED_OW_M": 29.59,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
+    },
     {
       "MOVIE_ID": 1262,
       "MOVIE_TITLE": "Sense and Sensibility",
@@ -10552,23 +10552,23 @@
       "MOVIE_ID": 1216,
       "MOVIE_TITLE": "Clayface",
       "RELEASE_DATE": "2026-10-23",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "MID",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
+      "ACTUAL_TIER": "MID",
+      "TIER_HIT": true,
       "PRED_OW_M": 29.59,
-      "ACTUAL_OW_M": null,
+      "ACTUAL_OW_M": 24.0,
       "BEAR_OW_M": 19.6,
       "BASE_OW_M": 29.59,
       "BULL_OW_M": 49.2,
-      "ABS_ERROR_M": null,
+      "ABS_ERROR_M": 5.59,
       "P_SMALL_PCT": null,
       "P_MID_PCT": null,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $29.6M (MID); risk-adjusted -; range $19.6M to $49.2M. Chance of a $50M+ opening: 0%.",
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $29.6M (MID); risk-adjusted -; range $19.6M to $49.2M. Chance of a $50M+ opening: 0%. Outcome: opened to $24.0M (MID) on 3,458 screens vs $29.59M pred; tier called correctly.",
       "BAYES_OW_M": null
     },
     {
@@ -10711,10 +10711,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-10-27T20:01:09Z",
+    "published_at": "2026-10-27T20:08:37Z",
     "updated": "October 27, 2026",
-    "review_id": "R-1027-031fb9",
-    "snapshot": "3f932a909d6e",
+    "review_id": "R-1027-27198e",
+    "snapshot": "2d2a1cccebd1",
     "model": "V31 V7"
   }
 }
