@@ -29,6 +29,16 @@
       "PRED_OW_M": 6.78,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_FLAG": false
+    },
+    {
+      "MOVIE_ID": 1236,
+      "MOVIE_TITLE": "How to Rob a Bank",
+      "RELEASE_DATE": "2026-11-13",
+      "PREDICTION_TYPE": "UPCOMING",
+      "PRED_TIER": "SMALL",
+      "PRED_OW_M": 6.51,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
     }
   ],
   "past": [
@@ -10675,13 +10685,36 @@
       "BREAKOUT_FLAG": false,
       "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $7.8M (SMALL); risk-adjusted $6.7M; range $5.6M to $11.1M. Chance of a $50M+ opening: 0%.",
       "BAYES_OW_M": 6.7
+    },
+    {
+      "MOVIE_ID": 1236,
+      "MOVIE_TITLE": "How to Rob a Bank",
+      "RELEASE_DATE": "2026-11-13",
+      "PREDICTION_TYPE": "UPCOMING",
+      "MODEL_VERSION": "V31v7@D21",
+      "PRED_TIER": "SMALL",
+      "ACTUAL_TIER": null,
+      "TIER_HIT": null,
+      "PRED_OW_M": 6.51,
+      "ACTUAL_OW_M": null,
+      "BEAR_OW_M": 4.33,
+      "BASE_OW_M": 6.51,
+      "BULL_OW_M": 10.79,
+      "ABS_ERROR_M": null,
+      "P_SMALL_PCT": 99.0,
+      "P_MID_PCT": 1.0,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_PCT": 0.0,
+      "BREAKOUT_FLAG": false,
+      "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $6.5M (SMALL); risk-adjusted $6.2M; range $4.3M to $10.8M. Chance of a $50M+ opening: 0%.",
+      "BAYES_OW_M": 6.22
     }
   ],
   "meta": {
-    "published_at": "2026-10-23T20:26:21Z",
-    "updated": "October 23, 2026",
-    "review_id": "R-1023-0cfe89",
-    "snapshot": "c49813be2726",
+    "published_at": "2026-10-27T20:01:09Z",
+    "updated": "October 27, 2026",
+    "review_id": "R-1027-031fb9",
+    "snapshot": "3f932a909d6e",
     "model": "V31 V7"
   }
 }
