@@ -1,6 +1,16 @@
 {
   "upcoming": [
     {
+      "MOVIE_ID": 1280,
+      "MOVIE_TITLE": "The Hunger Games: Sunrise on the Reaping",
+      "RELEASE_DATE": "2026-11-20",
+      "PREDICTION_TYPE": "UPCOMING",
+      "PRED_TIER": "LARGE+",
+      "PRED_OW_M": 66.47,
+      "P_LARGE_PCT": 82.4,
+      "BREAKOUT_FLAG": false
+    },
+    {
       "MOVIE_ID": 1223,
       "MOVIE_TITLE": "Ebenezer: A Christmas Carol",
       "RELEASE_DATE": "2026-11-13",
@@ -10741,13 +10751,36 @@
       "BREAKOUT_FLAG": false,
       "SUMMARY_TEXT": "Prediction of record, made 14 days before opening with the production model V31 V7. Best estimate $18.9M (MID); risk-adjusted $16.7M; range $13.1M to $27.9M. Chance of a $50M+ opening: 2%.",
       "BAYES_OW_M": 16.71
+    },
+    {
+      "MOVIE_ID": 1280,
+      "MOVIE_TITLE": "The Hunger Games: Sunrise on the Reaping",
+      "RELEASE_DATE": "2026-11-20",
+      "PREDICTION_TYPE": "UPCOMING",
+      "MODEL_VERSION": "V31v7@D21",
+      "PRED_TIER": "LARGE+",
+      "ACTUAL_TIER": null,
+      "TIER_HIT": null,
+      "PRED_OW_M": 66.47,
+      "ACTUAL_OW_M": null,
+      "BEAR_OW_M": 31.57,
+      "BASE_OW_M": 66.47,
+      "BULL_OW_M": 92.95,
+      "ABS_ERROR_M": null,
+      "P_SMALL_PCT": 0.0,
+      "P_MID_PCT": 17.6,
+      "P_LARGE_PCT": 82.4,
+      "BREAKOUT_PCT": 82.4,
+      "BREAKOUT_FLAG": false,
+      "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $66.5M (LARGE+); risk-adjusted $48.8M; range $31.6M to $93.0M. Chance of a $50M+ opening: 82%.",
+      "BAYES_OW_M": 48.76
     }
   ],
   "meta": {
-    "published_at": "2026-11-04T19:02:15Z",
+    "published_at": "2026-11-04T20:39:56Z",
     "updated": "November 4, 2026",
-    "review_id": "R-1104-0ffc99",
-    "snapshot": "41c7f51462a7",
+    "review_id": "R-1104-d4a3a4",
+    "snapshot": "eaeaf358dd7d",
     "model": "V31 V7"
   }
 }
