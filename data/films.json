@@ -21,6 +21,16 @@
       "BREAKOUT_FLAG": false
     },
     {
+      "MOVIE_ID": 1228,
+      "MOVIE_TITLE": "Focker-in-Law",
+      "RELEASE_DATE": "2026-11-25",
+      "PREDICTION_TYPE": "UPCOMING",
+      "PRED_TIER": "SMALL",
+      "PRED_OW_M": 13.62,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
+    },
+    {
       "MOVIE_ID": 1213,
       "MOVIE_TITLE": "Ghost Soldier",
       "RELEASE_DATE": "2026-11-11",
@@ -10774,13 +10784,36 @@
       "BREAKOUT_FLAG": false,
       "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $66.5M (LARGE+); risk-adjusted $48.8M; range $31.6M to $93.0M. Chance of a $50M+ opening: 82%.",
       "BAYES_OW_M": 48.76
+    },
+    {
+      "MOVIE_ID": 1228,
+      "MOVIE_TITLE": "Focker-in-Law",
+      "RELEASE_DATE": "2026-11-25",
+      "PREDICTION_TYPE": "UPCOMING",
+      "MODEL_VERSION": "V31v7@D21",
+      "PRED_TIER": "SMALL",
+      "ACTUAL_TIER": null,
+      "TIER_HIT": null,
+      "PRED_OW_M": 13.62,
+      "ACTUAL_OW_M": null,
+      "BEAR_OW_M": 9.42,
+      "BASE_OW_M": 13.62,
+      "BULL_OW_M": 20.96,
+      "ABS_ERROR_M": null,
+      "P_SMALL_PCT": 68.4,
+      "P_MID_PCT": 31.6,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_PCT": 0.0,
+      "BREAKOUT_FLAG": false,
+      "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $13.6M (SMALL); risk-adjusted $12.3M; range $9.4M to $21.0M. Chance of a $50M+ opening: 0%.",
+      "BAYES_OW_M": 12.33
     }
   ],
   "meta": {
-    "published_at": "2026-11-04T20:39:56Z",
-    "updated": "November 4, 2026",
-    "review_id": "R-1104-d4a3a4",
-    "snapshot": "eaeaf358dd7d",
+    "published_at": "2026-11-05T16:57:33Z",
+    "updated": "November 5, 2026",
+    "review_id": "R-1105-7fe426",
+    "snapshot": "81d55f73762a",
     "model": "V31 V7"
   }
 }
