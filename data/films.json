@@ -41,16 +41,6 @@
       "BREAKOUT_FLAG": false
     },
     {
-      "MOVIE_ID": 1300,
-      "MOVIE_TITLE": "Wild Horse Nine",
-      "RELEASE_DATE": "2026-11-06",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "SMALL",
-      "PRED_OW_M": 7.08,
-      "P_LARGE_PCT": 0.0,
-      "BREAKOUT_FLAG": false
-    },
-    {
       "MOVIE_ID": 1236,
       "MOVIE_TITLE": "How to Rob a Bank",
       "RELEASE_DATE": "2026-11-13",
@@ -10671,29 +10661,6 @@
       "BAYES_OW_M": 11.4
     },
     {
-      "MOVIE_ID": 1300,
-      "MOVIE_TITLE": "Wild Horse Nine",
-      "RELEASE_DATE": "2026-11-06",
-      "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D3",
-      "PRED_TIER": "SMALL",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
-      "PRED_OW_M": 7.08,
-      "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 4.32,
-      "BASE_OW_M": 7.08,
-      "BULL_OW_M": 13.68,
-      "ABS_ERROR_M": null,
-      "P_SMALL_PCT": 58.7,
-      "P_MID_PCT": 41.3,
-      "P_LARGE_PCT": 0.0,
-      "BREAKOUT_PCT": 0.0,
-      "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $7.1M (SMALL); risk-adjusted $6.8M; range $4.3M to $13.7M. Chance of a $50M+ opening: 0%.",
-      "BAYES_OW_M": 6.8
-    },
-    {
       "MOVIE_ID": 1213,
       "MOVIE_TITLE": "Ghost Soldier",
       "RELEASE_DATE": "2026-11-11",
@@ -10810,10 +10777,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-06T15:40:19Z",
-    "updated": "November 6, 2026",
-    "review_id": "R-1106-9ebcfd",
-    "snapshot": "a97afb42e5bf",
+    "published_at": "2026-11-09T21:31:55Z",
+    "updated": "November 9, 2026",
+    "review_id": "R-1109-694b08",
+    "snapshot": "63405383ff3d",
     "model": "V31 V7"
   }
 }
