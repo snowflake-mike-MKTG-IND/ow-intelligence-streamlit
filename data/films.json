@@ -36,7 +36,7 @@
       "RELEASE_DATE": "2026-11-11",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "SMALL",
-      "PRED_OW_M": 7.78,
+      "PRED_OW_M": 8.26,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_FLAG": false
     },
@@ -46,7 +46,7 @@
       "RELEASE_DATE": "2026-11-13",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "SMALL",
-      "PRED_OW_M": 6.26,
+      "PRED_OW_M": 6.17,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_FLAG": false
     }
@@ -10665,46 +10665,46 @@
       "MOVIE_TITLE": "Ghost Soldier",
       "RELEASE_DATE": "2026-11-11",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D7",
+      "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "SMALL",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 7.78,
+      "PRED_OW_M": 8.26,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 5.39,
-      "BASE_OW_M": 7.78,
-      "BULL_OW_M": 11.35,
+      "BEAR_OW_M": 5.84,
+      "BASE_OW_M": 8.26,
+      "BULL_OW_M": 11.22,
       "ABS_ERROR_M": null,
       "P_SMALL_PCT": 93.3,
       "P_MID_PCT": 6.7,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 7 days before opening with the production model V31 V7. Best estimate $7.8M (SMALL); risk-adjusted $6.8M; range $5.4M to $11.3M. Chance of a $50M+ opening: 0%.",
-      "BAYES_OW_M": 6.78
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $8.3M (SMALL); risk-adjusted $6.5M; range $5.8M to $11.2M. Chance of a $50M+ opening: 0%.",
+      "BAYES_OW_M": 6.49
     },
     {
       "MOVIE_ID": 1236,
       "MOVIE_TITLE": "How to Rob a Bank",
       "RELEASE_DATE": "2026-11-13",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D7",
+      "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "SMALL",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 6.26,
+      "PRED_OW_M": 6.17,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 4.23,
-      "BASE_OW_M": 6.26,
-      "BULL_OW_M": 10.3,
+      "BEAR_OW_M": 4.19,
+      "BASE_OW_M": 6.17,
+      "BULL_OW_M": 10.14,
       "ABS_ERROR_M": null,
       "P_SMALL_PCT": 99.0,
       "P_MID_PCT": 1.0,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 7 days before opening with the production model V31 V7. Best estimate $6.3M (SMALL); risk-adjusted $5.9M; range $4.2M to $10.3M. Chance of a $50M+ opening: 0%.",
-      "BAYES_OW_M": 5.92
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $6.2M (SMALL); risk-adjusted $5.8M; range $4.2M to $10.1M. Chance of a $50M+ opening: 0%.",
+      "BAYES_OW_M": 5.83
     },
     {
       "MOVIE_ID": 1223,
@@ -10777,10 +10777,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-09T21:31:55Z",
-    "updated": "November 9, 2026",
-    "review_id": "R-1109-694b08",
-    "snapshot": "63405383ff3d",
+    "published_at": "2026-11-10T18:27:04Z",
+    "updated": "November 10, 2026",
+    "review_id": "R-1110-9459d2",
+    "snapshot": "9061c5f59d97",
     "model": "V31 V7"
   }
 }
