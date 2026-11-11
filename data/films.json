@@ -16,7 +16,7 @@
       "RELEASE_DATE": "2026-11-13",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "MID",
-      "PRED_OW_M": 20.46,
+      "PRED_OW_M": 19.59,
       "P_LARGE_PCT": 1.7,
       "BREAKOUT_FLAG": false
     },
@@ -10711,23 +10711,23 @@
       "MOVIE_TITLE": "Ebenezer: A Christmas Carol",
       "RELEASE_DATE": "2026-11-13",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D7",
+      "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "MID",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 20.46,
+      "PRED_OW_M": 19.59,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 14.12,
-      "BASE_OW_M": 20.46,
-      "BULL_OW_M": 29.58,
+      "BEAR_OW_M": 13.48,
+      "BASE_OW_M": 19.59,
+      "BULL_OW_M": 28.81,
       "ABS_ERROR_M": null,
-      "P_SMALL_PCT": 39.9,
-      "P_MID_PCT": 58.4,
+      "P_SMALL_PCT": 36.7,
+      "P_MID_PCT": 61.6,
       "P_LARGE_PCT": 1.7,
       "BREAKOUT_PCT": 1.7,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 7 days before opening with the production model V31 V7. Best estimate $20.5M (MID); risk-adjusted $17.5M; range $14.1M to $29.6M. Chance of a $50M+ opening: 2%.",
-      "BAYES_OW_M": 17.54
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $19.6M (MID); risk-adjusted $17.2M; range $13.5M to $28.8M. Chance of a $50M+ opening: 2%.",
+      "BAYES_OW_M": 17.16
     },
     {
       "MOVIE_ID": 1280,
@@ -10777,10 +10777,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-11T18:30:08Z",
+    "published_at": "2026-11-11T18:38:11Z",
     "updated": "November 11, 2026",
-    "review_id": "R-1111-927aad",
-    "snapshot": "9e8e36c995c6",
+    "review_id": "R-1111-65a296",
+    "snapshot": "f77ab4c43f90",
     "model": "V31 V7"
   }
 }
