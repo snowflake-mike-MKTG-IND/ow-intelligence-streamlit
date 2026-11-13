@@ -6,8 +6,8 @@
       "RELEASE_DATE": "2026-11-20",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "LARGE+",
-      "PRED_OW_M": 66.19,
-      "P_LARGE_PCT": 68.7,
+      "PRED_OW_M": 61.57,
+      "P_LARGE_PCT": 62.9,
       "BREAKOUT_FLAG": false
     },
     {
@@ -10734,23 +10734,23 @@
       "MOVIE_TITLE": "The Hunger Games: Sunrise on the Reaping",
       "RELEASE_DATE": "2026-11-20",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D14",
+      "MODEL_VERSION": "V31v7@D7",
       "PRED_TIER": "LARGE+",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 66.19,
+      "PRED_OW_M": 61.57,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 37.93,
-      "BASE_OW_M": 66.19,
-      "BULL_OW_M": 86.98,
+      "BEAR_OW_M": 41.23,
+      "BASE_OW_M": 61.57,
+      "BULL_OW_M": 79.66,
       "ABS_ERROR_M": null,
       "P_SMALL_PCT": 0.0,
-      "P_MID_PCT": 31.3,
-      "P_LARGE_PCT": 68.7,
-      "BREAKOUT_PCT": 68.7,
+      "P_MID_PCT": 37.1,
+      "P_LARGE_PCT": 62.9,
+      "BREAKOUT_PCT": 62.9,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 14 days before opening with the production model V31 V7. Best estimate $66.2M (LARGE+); risk-adjusted $49.4M; range $37.9M to $87.0M. Chance of a $50M+ opening: 69%.",
-      "BAYES_OW_M": 49.43
+      "SUMMARY_TEXT": "Prediction of record, made 7 days before opening with the production model V31 V7. Best estimate $61.6M (LARGE+); risk-adjusted $45.9M; range $41.2M to $79.7M. Chance of a $50M+ opening: 63%.",
+      "BAYES_OW_M": 45.92
     },
     {
       "MOVIE_ID": 1228,
@@ -10777,10 +10777,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-11T18:38:11Z",
-    "updated": "November 11, 2026",
-    "review_id": "R-1111-65a296",
-    "snapshot": "f77ab4c43f90",
+    "published_at": "2026-11-13T18:02:19Z",
+    "updated": "November 13, 2026",
+    "review_id": "R-1113-577886",
+    "snapshot": "d35e8469bb3b",
     "model": "V31 V7"
   }
 }
