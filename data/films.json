@@ -11,6 +11,16 @@
       "BREAKOUT_FLAG": false
     },
     {
+      "MOVIE_ID": 1228,
+      "MOVIE_TITLE": "Focker-in-Law",
+      "RELEASE_DATE": "2026-11-25",
+      "PREDICTION_TYPE": "UPCOMING",
+      "PRED_TIER": "MID",
+      "PRED_OW_M": 25.49,
+      "P_LARGE_PCT": 16.3,
+      "BREAKOUT_FLAG": false
+    },
+    {
       "MOVIE_ID": 1223,
       "MOVIE_TITLE": "Ebenezer: A Christmas Carol",
       "RELEASE_DATE": "2026-11-13",
@@ -18,16 +28,6 @@
       "PRED_TIER": "MID",
       "PRED_OW_M": 19.59,
       "P_LARGE_PCT": 1.7,
-      "BREAKOUT_FLAG": false
-    },
-    {
-      "MOVIE_ID": 1228,
-      "MOVIE_TITLE": "Focker-in-Law",
-      "RELEASE_DATE": "2026-11-25",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "MID",
-      "PRED_OW_M": 19.16,
-      "P_LARGE_PCT": 15.3,
       "BREAKOUT_FLAG": false
     },
     {
@@ -10771,19 +10771,19 @@
       "PRED_TIER": "MID",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 19.16,
+      "PRED_OW_M": 25.49,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 12.42,
-      "BASE_OW_M": 19.16,
-      "BULL_OW_M": 32.43,
+      "BEAR_OW_M": 17.22,
+      "BASE_OW_M": 25.49,
+      "BULL_OW_M": 40.69,
       "ABS_ERROR_M": null,
-      "P_SMALL_PCT": 25.1,
-      "P_MID_PCT": 59.6,
-      "P_LARGE_PCT": 15.3,
-      "BREAKOUT_PCT": 15.3,
+      "P_SMALL_PCT": 31.6,
+      "P_MID_PCT": 52.1,
+      "P_LARGE_PCT": 16.3,
+      "BREAKOUT_PCT": 16.3,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 14 days before opening with the production model V31 V7. Best estimate $19.2M (MID); risk-adjusted $18.5M; range $12.4M to $32.4M. Chance of a $50M+ opening: 15%.",
-      "BAYES_OW_M": 18.51
+      "SUMMARY_TEXT": "Prediction of record, made 14 days before opening with the production model V31 V7. Best estimate $25.5M (MID); risk-adjusted $24.0M; range $17.2M to $40.7M. Chance of a $50M+ opening: 16%.",
+      "BAYES_OW_M": 23.98
     },
     {
       "MOVIE_ID": 1296,
@@ -10810,10 +10810,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-13T22:20:47Z",
-    "updated": "November 13, 2026",
-    "review_id": "R-1113-14aacc",
-    "snapshot": "a4cd4da79da0",
+    "published_at": "2026-11-15T19:19:08Z",
+    "updated": "November 15, 2026",
+    "review_id": "R-1115-c465ac",
+    "snapshot": "abf52cdebf82",
     "model": "V31 V7"
   }
 }
