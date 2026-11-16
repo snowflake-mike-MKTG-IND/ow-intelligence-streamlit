@@ -39,29 +39,29 @@
       "PRED_OW_M": 10.05,
       "P_LARGE_PCT": 1.6,
       "BREAKOUT_FLAG": false
+    }
+  ],
+  "past": [
+    {
+      "MOVIE_ID": 1236,
+      "MOVIE_TITLE": "How to Rob a Bank",
+      "RELEASE_DATE": "2026-11-13",
+      "PREDICTION_TYPE": "RELEASED",
+      "PRED_TIER": "SMALL",
+      "PRED_OW_M": 6.17,
+      "P_LARGE_PCT": 0.0,
+      "BREAKOUT_FLAG": false
     },
     {
       "MOVIE_ID": 1213,
       "MOVIE_TITLE": "Ghost Soldier",
       "RELEASE_DATE": "2026-11-11",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "PRED_TIER": "SMALL",
       "PRED_OW_M": 8.26,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_FLAG": false
     },
-    {
-      "MOVIE_ID": 1236,
-      "MOVIE_TITLE": "How to Rob a Bank",
-      "RELEASE_DATE": "2026-11-13",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "SMALL",
-      "PRED_OW_M": 6.17,
-      "P_LARGE_PCT": 0.0,
-      "BREAKOUT_FLAG": false
-    }
-  ],
-  "past": [
     {
       "MOVIE_ID": 1216,
       "MOVIE_TITLE": "Clayface",
@@ -10674,46 +10674,46 @@
       "MOVIE_ID": 1213,
       "MOVIE_TITLE": "Ghost Soldier",
       "RELEASE_DATE": "2026-11-11",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "SMALL",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
+      "ACTUAL_TIER": "SMALL",
+      "TIER_HIT": true,
       "PRED_OW_M": 8.26,
-      "ACTUAL_OW_M": null,
+      "ACTUAL_OW_M": 5.2,
       "BEAR_OW_M": 5.84,
       "BASE_OW_M": 8.26,
       "BULL_OW_M": 11.22,
-      "ABS_ERROR_M": null,
+      "ABS_ERROR_M": 3.06,
       "P_SMALL_PCT": 93.3,
       "P_MID_PCT": 6.7,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $8.3M (SMALL); risk-adjusted $6.5M; range $5.8M to $11.2M. Chance of a $50M+ opening: 0%.",
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $8.3M (SMALL); risk-adjusted $6.5M; range $5.8M to $11.2M. Chance of a $50M+ opening: 0%. Outcome: opened to $5.2M (SMALL) on 2,558 screens vs $8.26M pred; tier called correctly.",
       "BAYES_OW_M": 6.49
     },
     {
       "MOVIE_ID": 1236,
       "MOVIE_TITLE": "How to Rob a Bank",
       "RELEASE_DATE": "2026-11-13",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "SMALL",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
+      "ACTUAL_TIER": "SMALL",
+      "TIER_HIT": true,
       "PRED_OW_M": 6.17,
-      "ACTUAL_OW_M": null,
+      "ACTUAL_OW_M": 5.19,
       "BEAR_OW_M": 4.19,
       "BASE_OW_M": 6.17,
       "BULL_OW_M": 10.14,
-      "ABS_ERROR_M": null,
+      "ABS_ERROR_M": 0.98,
       "P_SMALL_PCT": 99.0,
       "P_MID_PCT": 1.0,
       "P_LARGE_PCT": 0.0,
       "BREAKOUT_PCT": 0.0,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $6.2M (SMALL); risk-adjusted $5.8M; range $4.2M to $10.1M. Chance of a $50M+ opening: 0%.",
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $6.2M (SMALL); risk-adjusted $5.8M; range $4.2M to $10.1M. Chance of a $50M+ opening: 0%. Outcome: opened to $5.19M (SMALL) on 2,810 screens vs $6.17M pred; tier called correctly.",
       "BAYES_OW_M": 5.83
     },
     {
@@ -10810,10 +10810,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-15T19:19:08Z",
-    "updated": "November 15, 2026",
-    "review_id": "R-1115-c465ac",
-    "snapshot": "abf52cdebf82",
+    "published_at": "2026-11-16T21:20:26Z",
+    "updated": "November 16, 2026",
+    "review_id": "R-1116-864dc2",
+    "snapshot": "a737bdf15a71",
     "model": "V31 V7"
   }
 }
