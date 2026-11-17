@@ -10744,23 +10744,23 @@
       "MOVIE_TITLE": "The Hunger Games: Sunrise on the Reaping",
       "RELEASE_DATE": "2026-11-20",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D7",
+      "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "LARGE+",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
       "PRED_OW_M": 61.59,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 35.42,
+      "BEAR_OW_M": 35.98,
       "BASE_OW_M": 61.59,
-      "BULL_OW_M": 80.01,
+      "BULL_OW_M": 79.61,
       "ABS_ERROR_M": null,
       "P_SMALL_PCT": 0.0,
       "P_MID_PCT": 37.1,
       "P_LARGE_PCT": 62.9,
       "BREAKOUT_PCT": 62.9,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 7 days before opening with the production model V31 V7. Best estimate $61.6M (LARGE+); risk-adjusted $46.0M; range $35.4M to $80.0M. Chance of a $50M+ opening: 63%.",
-      "BAYES_OW_M": 46.0
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $61.6M (LARGE+); risk-adjusted $46.2M; range $36.0M to $79.6M. Chance of a $50M+ opening: 63%.",
+      "BAYES_OW_M": 46.2
     },
     {
       "MOVIE_ID": 1228,
@@ -10810,10 +10810,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-16T21:20:26Z",
-    "updated": "November 16, 2026",
-    "review_id": "R-1116-864dc2",
-    "snapshot": "a737bdf15a71",
+    "published_at": "2026-11-17T14:48:58Z",
+    "updated": "November 17, 2026",
+    "review_id": "R-1117-5049ea",
+    "snapshot": "38124f4c8a67",
     "model": "V31 V7"
   }
 }
