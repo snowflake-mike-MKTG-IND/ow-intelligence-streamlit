@@ -36,8 +36,8 @@
       "RELEASE_DATE": "2026-12-04",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "SMALL",
-      "PRED_OW_M": 10.05,
-      "P_LARGE_PCT": 1.6,
+      "PRED_OW_M": 9.19,
+      "P_LARGE_PCT": 1.5,
       "BREAKOUT_FLAG": false
     }
   ],
@@ -10790,30 +10790,30 @@
       "MOVIE_TITLE": "Violent Night 2",
       "RELEASE_DATE": "2026-12-04",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D21",
+      "MODEL_VERSION": "V31v7@D14",
       "PRED_TIER": "SMALL",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 10.05,
+      "PRED_OW_M": 9.19,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 7.27,
-      "BASE_OW_M": 10.05,
-      "BULL_OW_M": 14.52,
+      "BEAR_OW_M": 6.55,
+      "BASE_OW_M": 9.19,
+      "BULL_OW_M": 13.39,
       "ABS_ERROR_M": null,
-      "P_SMALL_PCT": 71.7,
-      "P_MID_PCT": 26.7,
-      "P_LARGE_PCT": 1.6,
-      "BREAKOUT_PCT": 1.6,
+      "P_SMALL_PCT": 76.9,
+      "P_MID_PCT": 21.5,
+      "P_LARGE_PCT": 1.5,
+      "BREAKOUT_PCT": 1.5,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 21 days before opening with the production model V31 V7. Best estimate $10.1M (SMALL); risk-adjusted $8.7M; range $7.3M to $14.5M. Chance of a $50M+ opening: 2%.",
-      "BAYES_OW_M": 8.65
+      "SUMMARY_TEXT": "Prediction of record, made 14 days before opening with the production model V31 V7. Best estimate $9.2M (SMALL); risk-adjusted $8.0M; range $6.5M to $13.4M. Chance of a $50M+ opening: 2%.",
+      "BAYES_OW_M": 8.01
     }
   ],
   "meta": {
-    "published_at": "2026-11-18T18:02:54Z",
-    "updated": "November 18, 2026",
-    "review_id": "R-1118-5ac69a",
-    "snapshot": "967456691bc5",
+    "published_at": "2026-11-20T18:02:39Z",
+    "updated": "November 20, 2026",
+    "review_id": "R-1120-1a555e",
+    "snapshot": "bd7173aff46b",
     "model": "V31 V7"
   }
 }
