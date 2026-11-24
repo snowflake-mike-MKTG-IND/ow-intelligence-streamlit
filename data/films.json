@@ -1,23 +1,13 @@
 {
   "upcoming": [
     {
-      "MOVIE_ID": 1280,
-      "MOVIE_TITLE": "The Hunger Games: Sunrise on the Reaping",
-      "RELEASE_DATE": "2026-11-20",
-      "PREDICTION_TYPE": "UPCOMING",
-      "PRED_TIER": "LARGE+",
-      "PRED_OW_M": 61.59,
-      "P_LARGE_PCT": 62.9,
-      "BREAKOUT_FLAG": false
-    },
-    {
       "MOVIE_ID": 1228,
       "MOVIE_TITLE": "Focker-in-Law",
       "RELEASE_DATE": "2026-11-25",
       "PREDICTION_TYPE": "UPCOMING",
       "PRED_TIER": "MID",
-      "PRED_OW_M": 24.71,
-      "P_LARGE_PCT": 15.7,
+      "PRED_OW_M": 21.37,
+      "P_LARGE_PCT": 5.9,
       "BREAKOUT_FLAG": false
     },
     {
@@ -42,6 +32,16 @@
     }
   ],
   "past": [
+    {
+      "MOVIE_ID": 1280,
+      "MOVIE_TITLE": "The Hunger Games: Sunrise on the Reaping",
+      "RELEASE_DATE": "2026-11-20",
+      "PREDICTION_TYPE": "RELEASED",
+      "PRED_TIER": "LARGE+",
+      "PRED_OW_M": 61.59,
+      "P_LARGE_PCT": 62.9,
+      "BREAKOUT_FLAG": false
+    },
     {
       "MOVIE_ID": 1236,
       "MOVIE_TITLE": "How to Rob a Bank",
@@ -10743,23 +10743,23 @@
       "MOVIE_ID": 1280,
       "MOVIE_TITLE": "The Hunger Games: Sunrise on the Reaping",
       "RELEASE_DATE": "2026-11-20",
-      "PREDICTION_TYPE": "UPCOMING",
+      "PREDICTION_TYPE": "RELEASED",
       "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "LARGE+",
-      "ACTUAL_TIER": null,
-      "TIER_HIT": null,
+      "ACTUAL_TIER": "LARGE+",
+      "TIER_HIT": true,
       "PRED_OW_M": 61.59,
-      "ACTUAL_OW_M": null,
+      "ACTUAL_OW_M": 119.32,
       "BEAR_OW_M": 35.98,
       "BASE_OW_M": 61.59,
       "BULL_OW_M": 79.61,
-      "ABS_ERROR_M": null,
+      "ABS_ERROR_M": 57.73,
       "P_SMALL_PCT": 0.0,
       "P_MID_PCT": 37.1,
       "P_LARGE_PCT": 62.9,
       "BREAKOUT_PCT": 62.9,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $61.6M (LARGE+); risk-adjusted $46.2M; range $36.0M to $79.6M. Chance of a $50M+ opening: 63%.",
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $61.6M (LARGE+); risk-adjusted $46.2M; range $36.0M to $79.6M. Chance of a $50M+ opening: 63%. Outcome: opened to $119.32M (LARGE+) on 4,018 screens vs $61.59M pred; tier called correctly.",
       "BAYES_OW_M": 46.2
     },
     {
@@ -10767,23 +10767,23 @@
       "MOVIE_TITLE": "Focker-in-Law",
       "RELEASE_DATE": "2026-11-25",
       "PREDICTION_TYPE": "UPCOMING",
-      "MODEL_VERSION": "V31v7@D7",
+      "MODEL_VERSION": "V31v7@D3",
       "PRED_TIER": "MID",
       "ACTUAL_TIER": null,
       "TIER_HIT": null,
-      "PRED_OW_M": 24.71,
+      "PRED_OW_M": 21.37,
       "ACTUAL_OW_M": null,
-      "BEAR_OW_M": 17.01,
-      "BASE_OW_M": 24.71,
-      "BULL_OW_M": 39.18,
+      "BEAR_OW_M": 14.52,
+      "BASE_OW_M": 21.37,
+      "BULL_OW_M": 34.99,
       "ABS_ERROR_M": null,
-      "P_SMALL_PCT": 36.0,
-      "P_MID_PCT": 48.3,
-      "P_LARGE_PCT": 15.7,
-      "BREAKOUT_PCT": 15.7,
+      "P_SMALL_PCT": 40.8,
+      "P_MID_PCT": 53.3,
+      "P_LARGE_PCT": 5.9,
+      "BREAKOUT_PCT": 5.9,
       "BREAKOUT_FLAG": false,
-      "SUMMARY_TEXT": "Prediction of record, made 7 days before opening with the production model V31 V7. Best estimate $24.7M (MID); risk-adjusted $23.0M; range $17.0M to $39.2M. Chance of a $50M+ opening: 16%.",
-      "BAYES_OW_M": 22.97
+      "SUMMARY_TEXT": "Prediction of record, made 3 days before opening with the production model V31 V7. Best estimate $21.4M (MID); risk-adjusted $20.2M; range $14.5M to $35.0M. Chance of a $50M+ opening: 6%.",
+      "BAYES_OW_M": 20.17
     },
     {
       "MOVIE_ID": 1296,
@@ -10810,10 +10810,10 @@
     }
   ],
   "meta": {
-    "published_at": "2026-11-20T18:02:39Z",
-    "updated": "November 20, 2026",
-    "review_id": "R-1120-1a555e",
-    "snapshot": "bd7173aff46b",
+    "published_at": "2026-11-24T00:04:08Z",
+    "updated": "November 23, 2026",
+    "review_id": "R-1124-cb8c70",
+    "snapshot": "2ee86cef5b68",
     "model": "V31 V7"
   }
 }
